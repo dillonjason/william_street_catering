@@ -39,9 +39,18 @@
       filter: contrast(1);
       padding: $logo-padding;
       border-radius: 4px;
+      transition: width ease-in-out 300ms;
 
       @media screen and (min-width: $large) {
         width: $logo-width-large;
+      }
+
+      &.smallLogo {
+        width: 30vw;
+
+        @media screen and (min-width: $large) {
+          width: 10vw;
+        }
       }
     }
   }
