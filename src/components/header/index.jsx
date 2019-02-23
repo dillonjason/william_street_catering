@@ -11,9 +11,19 @@ export const Header = () => {
   const [shrinkLogo, setShrinkLogo] = useState(false)
 
   window.onscroll = () => {
-    const top = document.body.querySelector("#content").getBoundingClientRect()
-      .top
-    setShrinkLogo(top < 50)
+    const content = document.body
+      .querySelector("#content")
+      .getBoundingClientRect()
+    const body = document.body.getBoundingClientRect()
+
+    const needToShrink = content.top < 50 && !shrinkLogo
+    const needToGrow = body.top === 0 && shrinkLogo
+
+    if (needToShrink) {
+      setShrinkLogo(true)
+    } else if (needToGrow) {
+      setShrinkLogo(false)
+    }
   }
 
   return (

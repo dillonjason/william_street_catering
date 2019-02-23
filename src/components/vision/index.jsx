@@ -5,6 +5,8 @@ import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.css"
 
 import styles from "./styles.module.scss"
+import "./carousel.scss"
+import { SubHeader } from "../sub_header"
 
 export const Vision = () => (
   <StaticQuery
@@ -31,6 +33,7 @@ export const Vision = () => (
     `}
     render={data => (
       <div className={styles.container}>
+        <SubHeader>What It Means to Work With Us</SubHeader>
         <div className={styles.carousel}>
           <Carousel
             showThumbs={false}
@@ -51,7 +54,6 @@ export const Vision = () => (
           </Carousel>
         </div>
         <div className={styles.content}>
-          <h2>What it means to work with William St.</h2>
           <p>
             Just take out whatever you don't want. It'll change your entire
             perspective. Just let this happen. We just let this flow right out

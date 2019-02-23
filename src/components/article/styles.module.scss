@@ -1,0 +1,30 @@
+.container {
+  clear: both;
+
+  .title {
+  }
+
+  .content {
+    .image {
+      width: 30%;
+      min-width: 250px;
+      max-width: 500px;
+
+      margin-bottom: 2rem;
+
+      &.left {
+        margin-right: 2rem;
+        float: left;
+      }
+
+      &.right {
+        margin-left: 2rem;
+        float: right;
+      }
+
+      img {
+        border-radius: 4px;
+      }
+    }
+  }
+}
