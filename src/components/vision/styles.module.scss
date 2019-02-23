@@ -1,0 +1,16 @@
+.container {
+  clear: both;
+
+  .carousel {
+    width: 30%;
+    min-width: 250px;
+    max-width: 500px;
+
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+  }
+}

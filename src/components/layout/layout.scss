@@ -1,5 +1,6 @@
 @import "../../sass/typography.scss";
 @import "../../sass/colors.scss";
+@import "../../sass/screen_widths.scss";
 
 html {
   font-family: $font-family;
@@ -16,6 +17,22 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1rem 2fr 1rem;
   grid-template-rows: auto;
+
+  @media screen and (min-width: $large) {
+    grid-template-columns: 1fr 5fr 1fr;
+
+    > :nth-child(2) {
+      margin: auto;
+      max-width: 1920px;
+    }
+  }
+}
+
+.carousel {
+  .slide {
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -5,13 +5,13 @@ import { FaPhone, FaEnvelope } from "react-icons/fa"
 
 import styles from "./styles.module.scss"
 
-import Logo from "../logo"
+import { Logo } from "../logo"
 
-const Header = ({ siteTitle }) => {
+export const Header = () => {
   const [shrinkLogo, setShrinkLogo] = useState(false)
 
   window.onscroll = () => {
-    const top = document.body.querySelector(".content").getBoundingClientRect()
+    const top = document.body.querySelector("#content").getBoundingClientRect()
       .top
     setShrinkLogo(top < 50)
   }
@@ -57,5 +57,3 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-export default Header

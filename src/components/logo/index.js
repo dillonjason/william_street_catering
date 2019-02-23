@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Logo = () => (
+export const Logo = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -34,4 +34,3 @@ const Logo = () => (
     )}
   />
 )
-export default Logo
