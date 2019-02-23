@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="grid">
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -25,12 +25,13 @@ const Layout = ({ children }) => (
             maxWidth: 960,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
+            gridColumn: 2,
           }}
         >
           <main>{children}</main>
           <footer>© {new Date().getFullYear()}, built by Dillon Jason</footer>
         </div>
-      </>
+      </div>
     )}
   />
 )

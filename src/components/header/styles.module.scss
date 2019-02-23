@@ -6,9 +6,13 @@
   $logo-width-large: 30vw;
   $logo-padding: 0.75rem;
 
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  grid-column: 1 / 4;
+  position: sticky;
+  top: 0;
+  background: white;
 
   .hero {
     position: relative;
