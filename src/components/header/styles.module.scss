@@ -1,0 +1,96 @@
+@import "../../sass/screen_widths.scss";
+@import "../../sass/colors.scss";
+
+.container {
+  $logo-width: 80vw;
+  $logo-width-large: 30vw;
+  $logo-padding: 0.75rem;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .background {
+      background: url("../../images/hero.jpg");
+      filter: blur(4px);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+
+      height: 100%;
+      width: 100%;
+      content: " ";
+    }
+
+    .logo {
+      margin: 1rem 0;
+      width: $logo-width;
+      background-color: rgba(255, 255, 255, 0.37);
+      filter: contrast(1);
+      padding: $logo-padding;
+      border-radius: 4px;
+
+      @media screen and (min-width: $large) {
+        width: $logo-width-large;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: $logo-width;
+    margin-top: 0.5rem;
+    font-size: 20px;
+
+    @media screen and (min-width: $large) {
+      width: calc(#{$logo-width-large} + #{$logo-padding * 2} + 100px);
+    }
+
+    a,
+    a:active {
+      text-decoration: none;
+      color: $body;
+    }
+
+    .phoneText {
+      display: none;
+
+      @media screen and (min-width: $small) {
+        display: block;
+      }
+    }
+
+    .emailText {
+      display: none;
+
+      @media screen and (min-width: $small) {
+        display: block;
+      }
+    }
+
+    .phoneIcon {
+      display: block;
+
+      @media screen and (min-width: $small) {
+        display: none;
+      }
+    }
+
+    .emailIcon {
+      display: block;
+
+      @media screen and (min-width: $small) {
+        display: none;
+      }
+    }
+  }
+}
