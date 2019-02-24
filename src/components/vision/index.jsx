@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.css"
 import styles from "./styles.module.scss"
 import "./carousel.scss"
 import { SubHeader } from "../sub_header"
+import { Article } from "../article"
 
 export const Vision = () => (
   <StaticQuery
@@ -34,26 +35,31 @@ export const Vision = () => (
     render={data => (
       <div className={styles.container}>
         <SubHeader>What It Means to Work With Us</SubHeader>
-        <div className={styles.carousel}>
-          <Carousel
-            showThumbs={false}
-            infiniteLoop
-            autoPlay
-            showStatus={false}
-            transitionTime={1000}
-          >
-            <div className={styles.carouselWrapper}>
-              <Img fluid={data.first.childImageSharp.fluid} />
+        <Article
+          img={
+            <div className={styles.carousel}>
+              <Carousel
+                showThumbs={false}
+                infiniteLoop
+                autoPlay
+                showStatus={false}
+                transitionTime={1000}
+              >
+                <div className={styles.carouselWrapper}>
+                  <Img fluid={data.first.childImageSharp.fluid} />
+                </div>
+                <div className={styles.carouselWrapper}>
+                  <Img fluid={data.second.childImageSharp.fluid} />
+                </div>
+                <div className={styles.carouselWrapper}>
+                  <Img fluid={data.third.childImageSharp.fluid} />
+                </div>
+              </Carousel>
             </div>
-            <div className={styles.carouselWrapper}>
-              <Img fluid={data.second.childImageSharp.fluid} />
-            </div>
-            <div className={styles.carouselWrapper}>
-              <Img fluid={data.third.childImageSharp.fluid} />
-            </div>
-          </Carousel>
-        </div>
-        <div className={styles.content}>
+          }
+          imgPosition="left"
+          largeImage
+        >
           <p>
             Just take out whatever you don't want. It'll change your entire
             perspective. Just let this happen. We just let this flow right out
@@ -69,7 +75,7 @@ export const Vision = () => (
             you don't have to spend your time thinking about what's happening -
             you just let it happen.
           </p>
-        </div>
+        </Article>
       </div>
     )}
   />

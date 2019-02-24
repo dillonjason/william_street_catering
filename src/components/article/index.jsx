@@ -1,11 +1,17 @@
 import React from "react"
 import styles from "./styles.module.scss"
 
-export const Article = ({ title, img, imgPosition, children }) => (
+export const Article = ({ title, img, imgPosition, largeImage, children }) => (
   <div className={styles.container}>
-    <h3 className={styles.title}>{title}</h3>
+    {title && <h3 className={styles.title}>{title}</h3>}
     <div className={styles.content}>
-      <div className={`${styles.image} ${styles[imgPosition]}`}>{img}</div>
+      <div
+        className={`${styles.image} ${styles[imgPosition]} ${
+          largeImage ? styles.largeImage : ""
+        }`}
+      >
+        {img}
+      </div>
       {children}
     </div>
   </div>

@@ -43,14 +43,14 @@
       border-radius: 4px;
       transition: width ease-in-out 300ms;
 
-      @media screen and (min-width: $large) {
+      @media screen and (min-width: $small) {
         width: $logo-width-large;
       }
 
       &.smallLogo {
         width: 30vw;
 
-        @media screen and (min-width: $large) {
+        @media screen and (min-width: $small) {
           width: 10vw;
         }
       }
@@ -66,7 +66,7 @@
     margin-top: 0.5rem;
     font-size: 20px;
 
-    @media screen and (min-width: $large) {
+    @media screen and (min-width: $small) {
       width: calc(#{$logo-width-large} + #{$logo-padding * 2} + 100px);
     }
 
@@ -79,7 +79,7 @@
     .phoneText {
       display: none;
 
-      @media screen and (min-width: $small) {
+      @media screen and (min-width: $medium) {
         display: block;
       }
     }
@@ -87,7 +87,7 @@
     .emailText {
       display: none;
 
-      @media screen and (min-width: $small) {
+      @media screen and (min-width: $medium) {
         display: block;
       }
     }
@@ -95,7 +95,7 @@
     .phoneIcon {
       display: block;
 
-      @media screen and (min-width: $small) {
+      @media screen and (min-width: $medium) {
         display: none;
       }
     }
@@ -103,7 +103,7 @@
     .emailIcon {
       display: block;
 
-      @media screen and (min-width: $small) {
+      @media screen and (min-width: $medium) {
         display: none;
       }
     }
