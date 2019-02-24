@@ -10,19 +10,21 @@ import { Logo } from "../logo"
 export const Header = () => {
   const [shrinkLogo, setShrinkLogo] = useState(false)
 
-  window.onscroll = () => {
-    const content = document.body
-      .querySelector("#content")
-      .getBoundingClientRect()
-    const body = document.body.getBoundingClientRect()
-
-    const needToShrink = content.top < 50 && !shrinkLogo
-    const needToGrow = body.top === 0 && shrinkLogo
-
-    if (needToShrink) {
-      setShrinkLogo(true)
-    } else if (needToGrow) {
-      setShrinkLogo(false)
+  if (typeof window !== 'undefined') {
+    window.onscroll = () => {
+      const content = document.body
+        .querySelector("#content")
+        .getBoundingClientRect()
+      const body = document.body.getBoundingClientRect()
+  
+      const needToShrink = content.top < 50 && !shrinkLogo
+      const needToGrow = body.top === 0 && shrinkLogo
+  
+      if (needToShrink) {
+        setShrinkLogo(true)
+      } else if (needToGrow) {
+        setShrinkLogo(false)
+      }
     }
   }
 

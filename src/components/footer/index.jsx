@@ -28,14 +28,14 @@ export const Footer = () => (
       <li>&copy; {new Date().getFullYear()}</li>
       <li>Built by Dillon Jason</li>
       <li>
-        <a href="http://www.dillonjason.net" target="_blank">
+        <a href="http://www.dillonjason.net" target="_blank" rel="noopener noreferrer">
           www.dillonjason.net
         </a>
       </li>
       <li>
         <a
           href="https://github.com/dillonjason/william_street_catering"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           Source
         </a>
