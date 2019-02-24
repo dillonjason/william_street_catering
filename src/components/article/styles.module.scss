@@ -7,10 +7,13 @@
   margin-bottom: 2rem;
 
   .title {
-    align-self: center;
+    text-align: center;
+    padding-bottom: 1rem;
+    width: 100%;
+    border-bottom: 1px solid black;
 
     @media screen and (min-width: $large) {
-      align-self: auto;
+      text-align: left;
     }
   }
 
