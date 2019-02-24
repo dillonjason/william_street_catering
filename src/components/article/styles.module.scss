@@ -1,7 +1,17 @@
+@import "../../sass/screen_widths.scss";
+
 .container {
   clear: both;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 
   .title {
+    align-self: center;
+
+    @media screen and (min-width: $large) {
+      align-self: auto;
+    }
   }
 
   .content {
@@ -10,16 +20,20 @@
       min-width: 250px;
       max-width: 500px;
 
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 2rem;
 
-      &.left {
-        margin-right: 2rem;
-        float: left;
-      }
+      @media screen and (min-width: $large) {
+        &.left {
+          margin-right: 2rem;
+          float: left;
+        }
 
-      &.right {
-        margin-left: 2rem;
-        float: right;
+        &.right {
+          margin-left: 2rem;
+          float: right;
+        }
       }
 
       img {
