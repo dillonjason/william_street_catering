@@ -61,19 +61,14 @@ export const Vision = () => (
           largeImage
         >
           <p>
-            Just take out whatever you don't want. It'll change your entire
-            perspective. Just let this happen. We just let this flow right out
-            of our minds. Even the worst thing we can do here is good. Let that
-            brush dance around there and play. We'll make some happy little
-            bushes here.
-          </p>
-          <p>
-            Steve wants reflections, so let's give him reflections. See how easy
-            it is to create a little tree right in your world. I'm gonna add
-            just a tiny little amount of Prussian Blue. Nature is so fantastic,
-            enjoy it. Let it make you happy. And that's when it becomes fun -
-            you don't have to spend your time thinking about what's happening -
-            you just let it happen.
+            William St. Catering is a hospitality-focused, quality-driven
+            catering company operating in the Bronx and servicing all of New
+            York City. Offering catering services from Boston to Miami, we offer
+            the experience, customization, and passion to make your event truly
+            remarkable. Our mission is to provide flawless catering services
+            with an exceptionally-customized experience, high-quality food and
+            beverage service, and detail-oriented hospitality that leaves our
+            customers with the sense that they have been genuinely cared.
           </p>
         </Article>
       </div>

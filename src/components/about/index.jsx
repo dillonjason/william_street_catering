@@ -36,93 +36,76 @@ export const About = () => (
       <div className={styles.container}>
         <SubHeader>Who We Are</SubHeader>
         <Article
-          title="Tano Holmes"
+          title="Tano Holmes, Founder"
           img={<Img fluid={data.tano.childImageSharp.fluid} />}
           imgPosition="right"
         >
           <p>
-            Parrel Jack Tar dance the hempen jig pinnace gaff ahoy landlubber or
-            just lubber jib ballast pink. Ye execution dock list splice the main
-            brace spirits spyglass league bowsprit transom Arr. Jack Tar grapple
-            blow the man down Sea Legs hands deadlights lookout Arr man-of-war
-            grog.
-          </p>
-          <p>
-            Snow gibbet shrouds clap of thunder Sink me keel handsomely smartly
-            boom topsail. Aft scallywag fire in the hole come about overhaul
-            spirits Letter of Marque doubloon bring a spring upon her cable
-            carouser. Privateer grapple fore scuttle pressgang splice the main
-            brace port poop deck lugger plunder.
+            As a lover of food and a spirited entrepreneur, Tano is the founder
+            of William Street Catering. A Culinary Institute of America
+            graduate, Tano worked as a line cook at both the East Coast Grill
+            and Red Rooster in Harlem. He worked as a banquets chef at the
+            esteemed Waldorf Astoria in Manhattan. Tano’s banquet experience
+            allows him to oversee the execution of a variety of events; from
+            intimate dinner gatherings to weddings and graduation parties. When
+            not overseeing events at William St. Catering, Tano works as a
+            licensed real-estate agent for Century 21. As an Eagle Scout, Tano
+            volunteers with the Boy Scouts of America teaching cooking classes.
+            Tano’s talent for hospitality provides our clients with a
+            thoughtfully tailored experience.
           </p>
         </Article>
         <Article
-          title="Nick Gonzalez"
+          title="Nick Gonzalez, Executive Chef"
           img={<Img fluid={data.nick.childImageSharp.fluid} />}
           imgPosition="left"
         >
           <p>
-            Ancient alien mainstream archaelogy evidence alien contend
-            anti-gravity, portal Chariot of the Gods Easter island, choral
-            castle ancient religions King Soloman. Earth mound I know it sounds
-            crazy... Astronaut UFO portal anti-gravity, sky people King Soloman
-            pre-colonial aerodynamics mainstream archaelogy, the answer is a
-            resounding YES... Weightless foo fighter UFO. Star people UFO Machu
-            Picchu crystal skull Nazca lines Easter island, mystery DNA
-            manipulation legendary times ancient religions pyramids, alien
-            otherworldly visitors portal ancient religions sky people. Nazca
-            lines von Daniken portal contend, sun disc elongated skull,
-            otherworldly visitors weightless sightings. Ancient alien theorists
-            magnetic current mercury King Soloman, otherworldly visitors Indian
-            texts von Daniken vimana crystal skull, Sumerian texts mercury
-            mainstream archaelogy portal. Cover up extraterrestrial origin star
-            people sky people extraterrestrial Easter island, extraterrestrial
-            origin legendary times NASA Mahabharata Puma Punku burmuta triangle,
-            foo fighter Indian texts choral castle flying vessels.
+            Nick began his career as a line cook at Luna Maya restaurant in
+            Norfolk, Virginia. He graduated from the Culinary Institute of
+            America in 2015. As an advocate for healthy school lunch programs,
+            Nick worked as a chef instructor for Hudson Valley Farm to School
+            Program and oversaw the USDA’s farm to school grant program at St.
+            Andrew’s School in Richmond, Virginia working for Edible Education,
+            LLC. Nick honed his skills as a line cook at Gramercy Tavern in
+            Manhattan; after a year as a line cook there, he spent a year on the
+            restaurant’s whole animal butchery team. He is the Assistant Kitchen
+            Manager overseeing food production and menu development at Red
+            Rabbit, a producer and distributor of healthy school lunches in New
+            York City: 25,000+ healthy meals and snacks made fresh daily. Nick
+            draws inspiration from his latin american roots, his time working
+            with local farmers in New York, and his passion for quality
+            ingredients.
           </p>
         </Article>
         <Article
-          title="Clarissa Holmes"
+          title="Clarissa Holmes, Logistics Coordinator"
           img={<Img fluid={data.clarissa.childImageSharp.fluid} />}
           imgPosition="right"
         >
           <p>
-            Parrel Jack Tar dance the hempen jig pinnace gaff ahoy landlubber or
-            just lubber jib ballast pink. Ye execution dock list splice the main
-            brace spirits spyglass league bowsprit transom Arr. Jack Tar grapple
-            blow the man down Sea Legs hands deadlights lookout Arr man-of-war
-            grog.
-          </p>
-          <p>
-            Snow gibbet shrouds clap of thunder Sink me keel handsomely smartly
-            boom topsail. Aft scallywag fire in the hole come about overhaul
-            spirits Letter of Marque doubloon bring a spring upon her cable
-            carouser. Privateer grapple fore scuttle pressgang splice the main
-            brace port poop deck lugger plunder.
+            A New York City public school teacher and graduate of the University
+            of Texas, Clarissa oversees William St. Catering’s online presence
+            and handles customer inquiries. With an eye for design, she leads
+            menu formatting and layout in real time for William St. Catering
+            events. Clarissa manages customer engagement with our most current
+            work on social media and our website.
           </p>
         </Article>
         <Article
-          title="Miles"
+          title="Miles Thomas-Moore, Beverage Manager"
           img={<Img fluid={data.miles.childImageSharp.fluid} />}
           imgPosition="left"
         >
           <p>
-            Ancient alien mainstream archaelogy evidence alien contend
-            anti-gravity, portal Chariot of the Gods Easter island, choral
-            castle ancient religions King Soloman. Earth mound I know it sounds
-            crazy... Astronaut UFO portal anti-gravity, sky people King Soloman
-            pre-colonial aerodynamics mainstream archaelogy, the answer is a
-            resounding YES... Weightless foo fighter UFO. Star people UFO Machu
-            Picchu crystal skull Nazca lines Easter island, mystery DNA
-            manipulation legendary times ancient religions pyramids, alien
-            otherworldly visitors portal ancient religions sky people. Nazca
-            lines von Daniken portal contend, sun disc elongated skull,
-            otherworldly visitors weightless sightings. Ancient alien theorists
-            magnetic current mercury King Soloman, otherworldly visitors Indian
-            texts von Daniken vimana crystal skull, Sumerian texts mercury
-            mainstream archaelogy portal. Cover up extraterrestrial origin star
-            people sky people extraterrestrial Easter island, extraterrestrial
-            origin legendary times NASA Mahabharata Puma Punku burmuta triangle,
-            foo fighter Indian texts choral castle flying vessels.
+            Miles’ experience in food and beverage service, logistics
+            management, and his industry connections make him an invaluable
+            member of the William St. Catering team. He has worked as a
+            representative of the Beer and Specialities departments for Whole
+            Foods, a bartender and manager at Snack Dragon on Manhattan’s Lower
+            East Side, and currently holds the position of Sales Manager at
+            S.K.I Wholesale Beer Corporation overseeing distribution for the
+            West Side of Manhattan.
           </p>
         </Article>
       </div>
