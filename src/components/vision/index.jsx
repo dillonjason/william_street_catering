@@ -68,7 +68,7 @@ export const Vision = () => (
             remarkable. Our mission is to provide flawless catering services
             with an exceptionally-customized experience, high-quality food and
             beverage service, and detail-oriented hospitality that leaves our
-            customers with the sense that they have been genuinely cared.
+            customers with the sense that they have been genuinely cared for.
           </p>
         </Article>
       </div>
