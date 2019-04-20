@@ -11,10 +11,10 @@ export const Testimonials = () => (
   <StaticQuery
     query={graphql`
       query {
-        first: file(relativePath: { eq: "testimonial1.jpg" }) {
+        rimm_event: file(relativePath: { eq: "apple_salad.jpg" }) {
           ...testimonialData
         }
-        second: file(relativePath: { eq: "testimonial2.jpg" }) {
+        eglin_event: file(relativePath: { eq: "eglin_event.jpg" }) {
           ...testimonialData
         }
       }
@@ -31,11 +31,11 @@ export const Testimonials = () => (
       <div className={styles.container}>
         <SubHeader>What Others Say About Us</SubHeader>
         <Article
-          img={<Img fluid={data.first.childImageSharp.fluid} />}
+          img={<Img fluid={data.rimm_event.childImageSharp.fluid} />}
           imgPosition="right"
         >
           <Quote author="Eric and Allison Rimm">
-            Tano Jackson catered our party for about 40 Harvard School of Public
+            Tano Holmes catered our party for about 40 Harvard School of Public
             Health Nutrition Faculty, Post-docs, and students. From the
             beginning of the process, Tano was creative, collaborative and
             responsive to our suggestions and requests for revisions to the
@@ -49,7 +49,7 @@ export const Testimonials = () => (
           </Quote>
         </Article>
         <Article
-          img={<Img fluid={data.second.childImageSharp.fluid} />}
+          img={<Img fluid={data.eglin_event.childImageSharp.fluid} />}
           imgPosition="left"
         >
           <Quote author="Joy Eglin">

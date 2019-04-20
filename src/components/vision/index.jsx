@@ -13,13 +13,16 @@ export const Vision = () => (
   <StaticQuery
     query={graphql`
       query {
-        first: file(relativePath: { eq: "food1.jpg" }) {
+        first: file(relativePath: { eq: "salmon.jpg" }) {
           ...fileData
         }
-        second: file(relativePath: { eq: "food2.jpg" }) {
+        second: file(relativePath: { eq: "fall_event_2.jpg" }) {
           ...fileData
         }
-        third: file(relativePath: { eq: "food3.jpg" }) {
+        third: file(relativePath: { eq: "charcuterie.jpg" }) {
+          ...fileData
+        }
+        forth: file(relativePath: { eq: "oysters.jpg" }) {
           ...fileData
         }
       }
@@ -53,6 +56,9 @@ export const Vision = () => (
                 </div>
                 <div className={styles.carouselWrapper}>
                   <Img fluid={data.third.childImageSharp.fluid} />
+                </div>
+                <div className={styles.carouselWrapper}>
+                  <Img fluid={data.forth.childImageSharp.fluid} />
                 </div>
               </Carousel>
             </div>

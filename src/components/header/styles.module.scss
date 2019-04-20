@@ -3,7 +3,7 @@
 
 .container {
   $logo-width: 80vw;
-  $logo-width-large: 30vw;
+  $logo-width-large: 20vw;
   $logo-padding: 0.75rem;
 
   display: flex;
@@ -48,7 +48,7 @@
       }
 
       &.smallLogo {
-        width: 30vw;
+        width: 25vw;
 
         @media screen and (min-width: $small) {
           width: 10vw;
