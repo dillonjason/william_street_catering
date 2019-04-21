@@ -62,18 +62,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-self: center;
-    width: $logo-width;
+    max-width: 1920px;
     margin-top: 0.5rem;
     font-size: 20px;
+    width: 80vw;
 
     @media screen and (min-width: $small) {
-      width: calc(#{$logo-width-large} + #{$logo-padding * 2} + 100px);
+      width: 60vw;
     }
 
     a,
     a:active {
       text-decoration: none;
       color: $body;
+      margin: 0 0.5rem;
     }
 
     .phoneText {
