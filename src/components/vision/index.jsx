@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.css"
+import BlockContent from "@sanity/block-content-to-react"
 
 import styles from "./styles.module.scss"
 import "./carousel.scss"
@@ -13,31 +14,22 @@ export const Vision = () => (
   <StaticQuery
     query={graphql`
       query {
-        first: file(relativePath: { eq: "salmon.jpg" }) {
-          ...fileData
-        }
-        second: file(relativePath: { eq: "fall_event_2.jpg" }) {
-          ...fileData
-        }
-        third: file(relativePath: { eq: "charcuterie.jpg" }) {
-          ...fileData
-        }
-        forth: file(relativePath: { eq: "oysters.jpg" }) {
-          ...fileData
-        }
-      }
-
-      fragment fileData on File {
-        childImageSharp {
-          fluid(maxWidth: 1080) {
-            ...GatsbyImageSharpFluid
+        sanitySummary {
+          title
+          _rawBody
+          images {
+            asset {
+              fluid(maxWidth: 1080) {
+                ...GatsbySanityImageFluid
+              }
+            }
           }
         }
       }
     `}
-    render={data => (
+    render={({ sanitySummary }) => (
       <div className={styles.container}>
-        <SubHeader>What It Means to Work With Us</SubHeader>
+        <SubHeader>{sanitySummary.title}</SubHeader>
         <Article
           img={
             <div className={styles.carousel}>
@@ -48,18 +40,11 @@ export const Vision = () => (
                 showStatus={false}
                 transitionTime={1000}
               >
-                <div className={styles.carouselWrapper}>
-                  <Img fluid={data.first.childImageSharp.fluid} />
-                </div>
-                <div className={styles.carouselWrapper}>
-                  <Img fluid={data.second.childImageSharp.fluid} />
-                </div>
-                <div className={styles.carouselWrapper}>
-                  <Img fluid={data.third.childImageSharp.fluid} />
-                </div>
-                <div className={styles.carouselWrapper}>
-                  <Img fluid={data.forth.childImageSharp.fluid} />
-                </div>
+                {sanitySummary.images.map(image => (
+                  <div className={styles.carouselWrapper}>
+                    <Img fluid={image.asset.fluid} />
+                  </div>
+                ))}
               </Carousel>
             </div>
           }
@@ -67,14 +52,7 @@ export const Vision = () => (
           largeImage
         >
           <p>
-            William St. Catering is a hospitality-focused, quality-driven
-            catering company operating in the Bronx and servicing all of New
-            York City. Offering catering services from Boston to Miami, we offer
-            the experience, customization, and passion to make your event truly
-            remarkable. Our mission is to provide flawless catering services
-            with an exceptionally-customized experience, high-quality food and
-            beverage service, and detail-oriented hospitality that leaves our
-            customers with the sense that they have been genuinely cared for.
+            <BlockContent blocks={sanitySummary._rawBody} />
           </p>
         </Article>
       </div>
