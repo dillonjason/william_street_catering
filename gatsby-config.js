@@ -38,11 +38,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: '5il7noge',
-        dataset: 'production',
-      }
+        projectId: "5il7noge",
+        dataset: "production",
+        watchMode: true,
+      },
     },
   ],
 }
