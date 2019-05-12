@@ -11,7 +11,7 @@ export const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        allSanityEmployee {
+        allSanityEmployee(sort: { fields: order }) {
           nodes {
             id
             name
