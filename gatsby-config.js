@@ -37,5 +37,12 @@ module.exports = {
         trackingId: "UA-32959835-7",
       },
     },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: '5il7noge',
+        dataset: 'production',
+      }
+    },
   ],
 }
