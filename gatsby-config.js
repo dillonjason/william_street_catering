@@ -44,6 +44,7 @@ module.exports = {
         dataset: "production",
         token: process.env.SANITY_READ,
         overlayDrafts: process.env.DRAFTS === "true",
+        watchMode: process.env.DRAFTS === "true",
       },
     },
   ],
