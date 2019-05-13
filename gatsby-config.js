@@ -42,7 +42,8 @@ module.exports = {
       options: {
         projectId: "5il7noge",
         dataset: "production",
-        watchMode: true,
+        token: process.env.SANITY_READ,
+        overlayDrafts: process.env.DRAFTS === "true",
       },
     },
   ],
