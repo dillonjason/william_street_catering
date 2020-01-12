@@ -5,7 +5,14 @@ import { useIntersectionObserver } from "../../hooks/useIntersectionObserver"
 
 import styles from "./styles.module.scss"
 
-export const Article = ({ title, img, children, className, ...props }) => {
+export const Article = ({
+  title,
+  img,
+  children,
+  flip,
+  className,
+  ...props
+}) => {
   const selfRef = useRef()
   const [hasIntersected, setHasIntersected] = useState(false)
 
@@ -24,7 +31,9 @@ export const Article = ({ title, img, children, className, ...props }) => {
   return (
     <div
       ref={selfRef}
-      className={classNames(styles.container, className)}
+      className={classNames(styles.container, className, {
+        [styles.flip]: flip,
+      })}
       {...props}
     >
       <div className={styles.image}>{img}</div>

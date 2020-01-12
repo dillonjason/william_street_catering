@@ -3,22 +3,14 @@ import { useStaticQuery } from "gatsby"
 import BlockContent from "@sanity/block-content-to-react"
 
 import styles from "./styles.module.scss"
+import { Button } from "../../../../components/button"
 
 const query = graphql`
   {
     allSanityServices {
       nodes {
         type
-        summary {
-          _key
-          _type
-          style
-          children {
-            text
-            _key
-            _type
-          }
-        }
+        _rawSummary
       }
     }
   }
@@ -34,10 +26,11 @@ export const Services = () => {
         {allSanityServices.nodes.map(service => (
           <div className={styles.service}>
             <h3 className={styles.serviceType}>{service.type}</h3>
-            <BlockContent blocks={service.summary} />
+            <BlockContent blocks={service._rawSummary} />
           </div>
         ))}
       </div>
+      <Button to="/services">More Details</Button>
     </div>
   )
 }
