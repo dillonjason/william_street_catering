@@ -7,7 +7,7 @@ import { Button } from "../../../../components/button"
 
 const query = graphql`
   {
-    allSanityServices {
+    allSanityServices(limit: 3) {
       nodes {
         type
         _rawSummary
