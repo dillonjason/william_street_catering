@@ -1,53 +1,19 @@
 @import "../../sass/screen_widths.scss";
 
 .container {
-  clear: both;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
 
-  .title {
-    text-align: center;
-    padding-bottom: 1rem;
-    width: 100%;
-    border-bottom: 1px solid black;
-
-    @media screen and (min-width: $large) {
-      text-align: left;
-    }
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
   }
 
-  .content {
-    .image {
-      width: 80%;
-      min-width: 250px;
+  .image {
+    // display: none;
 
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 2rem;
-
-      @media screen and (min-width: $medium) {
-        width: 35%;
-
-        &.left {
-          margin-right: 2rem;
-          float: left;
-        }
-
-        &.right {
-          margin-left: 2rem;
-          float: right;
-        }
-
-        &.largeImage {
-          width: 45%;
-        }
-      }
-
-      img {
-        border-radius: 4px;
-      }
-    }
+    // @media screen and (min-width: $medium) {
+    //   display: block;
+    // }
   }
 }
