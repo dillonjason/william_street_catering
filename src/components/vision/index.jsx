@@ -29,7 +29,6 @@ export const Vision = () => {
   const { sanitySummary } = useStaticQuery(query)
   return (
     <Article
-      className={styles.container}
       title={sanitySummary.title}
       img={
         <Img
