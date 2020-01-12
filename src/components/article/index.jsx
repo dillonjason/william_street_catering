@@ -8,6 +8,7 @@ import styles from "./styles.module.scss"
 export const Article = ({
   title,
   img,
+  canHideImg,
   children,
   flip,
   className,
@@ -36,7 +37,11 @@ export const Article = ({
       })}
       {...props}
     >
-      <div className={styles.image}>{img}</div>
+      <div
+        className={classNames(styles.image, { [styles.canHide]: canHideImg })}
+      >
+        {img}
+      </div>
       <div className={styles.content}>
         {title && <h3 className={styles.title}>{title}</h3>}
         {title && (

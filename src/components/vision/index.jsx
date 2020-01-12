@@ -38,6 +38,7 @@ export const Vision = () => {
           fluid={sanitySummary.images[0].asset.fluid}
         />
       }
+      canHideImg
     >
       <BlockContent blocks={sanitySummary._rawBody} />
       <Button to="/contact-us">Contact Us</Button>

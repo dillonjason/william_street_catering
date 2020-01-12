@@ -4,7 +4,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  grid-column: 2;
+  grid-column: 1 / 4;
 
   @media screen and (min-width: $medium) {
     grid-column: 1 / 3;
@@ -12,8 +12,6 @@
   }
 
   &.flip {
-    flex-direction: column-reverse;
-
     @media screen and (min-width: $medium) {
       grid-column: 2 / 4;
       flex-direction: row-reverse;
@@ -22,11 +20,17 @@
 }
 
 .image {
-  display: none;
+  &.canHide {
+    display: none;
+  }
 
   @media screen and (min-width: $medium) {
     display: block;
     width: 60%;
+
+    &.canHide {
+      display: block;
+    }
   }
 }
 
@@ -34,11 +38,13 @@
   flex: 1;
   max-width: 600px;
   margin-bottom: 5%;
+  padding: 0 1rem;
 
   @media screen and (min-width: $medium) {
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 
