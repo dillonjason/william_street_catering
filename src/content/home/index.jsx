@@ -6,15 +6,12 @@ import { Vision } from "../../components/vision"
 import { Testimonials } from "../../components/testimonials"
 import { About } from "../../components/about"
 import { Hero } from "../../components/hero"
+import { Services } from "./components/services"
 
 export const Home = () => (
   <>
     <Hero />
     <Vision />
-    <Vision />
-    <Vision />
-    <Vision />
-    <Vision />
-    <Vision />
+    <Services />
   </>
 )

@@ -24,10 +24,12 @@
 .content {
   flex: 1;
   max-width: 600px;
+  margin-bottom: 5%;
 
   @media screen and (min-width: $medium) {
     margin-left: 5%;
     margin-top: 5%;
+    margin-bottom: 0;
   }
 }
 
