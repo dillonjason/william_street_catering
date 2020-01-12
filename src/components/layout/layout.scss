@@ -11,8 +11,14 @@ html {
 body {
   margin: 0;
   color: $body;
+  background-color: $background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-body;
+    background-color: $dark-background;
+  }
 }
 
 .grid {
