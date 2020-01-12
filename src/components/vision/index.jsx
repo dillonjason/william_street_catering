@@ -7,6 +7,7 @@ import BlockContent from "@sanity/block-content-to-react"
 import styles from "./styles.module.scss"
 
 import { Article } from "../article"
+import { Button } from "../button"
 
 const query = graphql`
   query {
@@ -39,6 +40,7 @@ export const Vision = () => {
       }
     >
       <BlockContent blocks={sanitySummary._rawBody} />
+      <Button to="/contact-us">Contact Us</Button>
     </Article>
   )
 }
