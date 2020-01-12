@@ -10,10 +10,6 @@ import { Hero } from "../../components/hero"
 export const Home = () => (
   <>
     <Hero />
-    <div id="content" className={styles.container}>
-      <Vision />
-      <Testimonials />
-      <About />
-    </div>
+    <Vision />
   </>
 )
