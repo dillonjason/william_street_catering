@@ -29,11 +29,6 @@ body {
 
   @media screen and (min-width: $large) {
     grid-template-columns: 1fr 5fr 1fr;
-
-    > :nth-child(2) {
-      margin: auto;
-      max-width: 1920px;
-    }
   }
 }
 
