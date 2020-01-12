@@ -1,4 +1,5 @@
 @import "../../sass/screen_widths.scss";
+@import "../../sass/colors.scss";
 
 .container {
   display: flex;
@@ -25,11 +26,26 @@
   max-width: 600px;
 
   @media screen and (min-width: $medium) {
-    margin-left: 5rem;
-    margin-top: 5rem;
+    margin-left: 5%;
+    margin-top: 5%;
   }
 }
 
 .title {
   font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.underline {
+  height: 2px;
+  width: 0;
+  transition: width 500ms ease-in-out;
+  background: $body;
+  @media (prefers-color-scheme: dark) {
+    background: $dark-body;
+  }
+
+  &.show {
+    width: 10rem;
+  }
 }

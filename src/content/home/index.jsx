@@ -11,5 +11,10 @@ export const Home = () => (
   <>
     <Hero />
     <Vision />
+    <Vision />
+    <Vision />
+    <Vision />
+    <Vision />
+    <Vision />
   </>
 )
