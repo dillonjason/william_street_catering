@@ -1,0 +1,26 @@
+@import "../../sass/screen_widths.scss";
+@import "../../sass/colors.scss";
+
+.large-only {
+  display: none;
+
+  @media screen and (min-width: $small) {
+    display: inline;
+  }
+}
+
+.navigation {
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $body;
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-body;
+    }
+  }
+
+  a + a {
+    margin-left: 1rem;
+  }
+}

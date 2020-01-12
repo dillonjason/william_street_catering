@@ -2,11 +2,12 @@
 @import "../../sass/colors.scss";
 
 .container {
-  $logo-width: 8rem;
+  $logo-width: 6rem;
+  $logo-width-large: 8rem;
   $logo-padding: 0.25rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0 1rem;
 
   grid-column: 1 / 4;
@@ -43,6 +44,17 @@
     @media (prefers-color-scheme: dark) {
       filter: invert(1);
     }
+
+    @media screen and (min-width: $large) {
+      width: $logo-width-large;
+    }
+  }
+
+  .navigation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .contact {
