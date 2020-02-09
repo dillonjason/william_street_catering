@@ -27,7 +27,7 @@ export const Article = ({
     if (!hasIntersected) {
       setHasIntersected(intersection.isIntersecting)
     }
-  }, [intersection])
+  }, [intersection, hasIntersected])
 
   return (
     <div

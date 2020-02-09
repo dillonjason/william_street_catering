@@ -32,7 +32,7 @@ export const useIntersectionObserver = ({
 
       observer.current.observe(target.current)
     }
-  }, [target.current])
+  }, [target, root, rootMargin, threshold])
 
   useEffect(() => cleanup, [])
 

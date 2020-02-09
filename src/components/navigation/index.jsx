@@ -12,7 +12,7 @@ export const Navigation = () => {
       <Link className={styles.largeOnly} to="/events">
         Events
       </Link>
-      <Link to="/contact-us">Contact Us</Link>
+      <Link to="/contact">Contact Us</Link>
     </nav>
   )
 }

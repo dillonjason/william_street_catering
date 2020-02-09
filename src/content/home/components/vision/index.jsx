@@ -38,7 +38,7 @@ export const Vision = () => {
       canHideImg
     >
       <BlockContent blocks={sanitySummary._rawBody} />
-      <Button to="/contact-us">Contact Us</Button>
+      <Button to="/contact">Contact Us</Button>
     </Article>
   )
 }
