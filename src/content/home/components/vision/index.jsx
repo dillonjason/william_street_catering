@@ -6,8 +6,8 @@ import BlockContent from "@sanity/block-content-to-react"
 
 import styles from "./styles.module.scss"
 
-import { Article } from "../article"
-import { Button } from "../button"
+import { Article } from "../../../../components/article"
+import { Button } from "../../../../components/button"
 
 const query = graphql`
   query {
