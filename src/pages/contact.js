@@ -12,7 +12,6 @@ const ContactPage = () => (
       keywords={["william", "street", "catering", "contact"]}
     />
     <Contact />
-    <Footer />
   </Layout>
 )
 

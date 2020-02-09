@@ -12,7 +12,6 @@ const AboutUsPage = () => (
       keywords={["william", "street", "catering", "about"]}
     />
     <AboutUs />
-    <Footer />
   </Layout>
 )
 

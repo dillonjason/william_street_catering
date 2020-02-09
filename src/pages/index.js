@@ -12,7 +12,6 @@ const IndexPage = () => (
       keywords={["william", "street", "catering", "new york"]}
     />
     <Home />
-    <Footer />
   </Layout>
 )
 

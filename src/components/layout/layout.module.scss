@@ -22,19 +22,19 @@ body {
   }
 }
 
-.grid {
+.layoutGrid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+.contentGrid {
   display: grid;
   grid-template-columns: 1rem 2fr 1rem;
   grid-template-rows: auto;
 
   @media screen and (min-width: $large) {
     grid-template-columns: 1fr 5fr 1fr;
-  }
-}
-
-.carousel {
-  .slide {
-    display: flex;
-    justify-content: center;
   }
 }
