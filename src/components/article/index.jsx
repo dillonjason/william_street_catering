@@ -19,7 +19,7 @@ export const Article = ({
 
   const intersection = useIntersectionObserver({
     target: selfRef,
-    threshold: 1,
+    threshold: 0.75,
   })
 
   useEffect(() => {
