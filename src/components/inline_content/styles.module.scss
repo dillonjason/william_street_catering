@@ -5,17 +5,24 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 2rem;
-  column-gap: 2rem;
 
   margin-bottom: 1rem;
 
   @media screen and (min-width: $medium) {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
 .item {
   text-align: center;
   overflow: hidden;
+  flex: 1;
+
+  @media screen and (min-width: $medium) {
+    + .item {
+      margin-left: 2rem;
+    }
+  }
 }
