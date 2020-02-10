@@ -4,6 +4,7 @@ import BlockContent from "@sanity/block-content-to-react"
 
 import styles from "./styles.module.scss"
 import { Button } from "../../../../components/button"
+import { InlineContent } from "../../../../components/inline_content"
 
 const query = graphql`
   {
@@ -22,14 +23,14 @@ export const Services = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Services Offered</h2>
-      <div className={styles.services}>
+      <InlineContent>
         {allSanityServices.nodes.map(service => (
-          <div className={styles.service}>
+          <>
             <h3 className={styles.serviceType}>{service.type}</h3>
             <BlockContent blocks={service._rawSummary} />
-          </div>
+          </>
         ))}
-      </div>
+      </InlineContent>
       <Button to="/services">More Details</Button>
     </div>
   )

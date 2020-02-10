@@ -21,24 +21,3 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
-.services {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-
-  @media screen and (min-width: $medium) {
-    flex-direction: row;
-  }
-}
-
-.service {
-  width: 15rem;
-  text-align: center;
-
-  @media screen and (min-width: $medium) {
-    + .service {
-      margin-left: 2rem;
-    }
-  }
-}

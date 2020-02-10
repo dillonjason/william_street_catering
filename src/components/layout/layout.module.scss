@@ -38,3 +38,7 @@ body {
     grid-template-columns: 1fr 5fr 1fr;
   }
 }
+
+.singleRow {
+  grid-column: 2 / 3;
+}

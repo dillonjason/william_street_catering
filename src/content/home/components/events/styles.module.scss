@@ -21,25 +21,3 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
-.events {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-
-  @media screen and (min-width: $medium) {
-    flex-direction: row;
-  }
-}
-
-.event {
-  width: 15rem;
-  text-align: center;
-  overflow: hidden;
-
-  @media screen and (min-width: $medium) {
-    + .event {
-      margin-left: 2rem;
-    }
-  }
-}

@@ -3,6 +3,7 @@ import { useStaticQuery } from "gatsby"
 
 import styles from "./styles.module.scss"
 import { Button } from "../../../../components/button"
+import { InlineContent } from "../../../../components/inline_content"
 
 const query = graphql`
   {
@@ -21,14 +22,14 @@ export const Events = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Recent Events</h2>
-      <div className={styles.events}>
+      <InlineContent>
         {allSanityTestimonial.nodes.map(event => (
-          <div className={styles.event}>
+          <>
             <h3 className={styles.eventTitle}>{event.title}</h3>
             <p>{event.summary}</p>
-          </div>
+          </>
         ))}
-      </div>
+      </InlineContent>
       <Button to="/events">More Details</Button>
     </div>
   )

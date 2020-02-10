@@ -1,0 +1,18 @@
+@import "../../../../sass/colors.scss";
+
+.container {
+  grid-column: 2 / 3;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: $body;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-body;
+  }
+}

@@ -3,10 +3,9 @@ import React from "react"
 import { Layout } from "../components/layout"
 import { SEO } from "../components/seo"
 import { Contact } from "../content/contact"
-import { Footer } from "../components/footer"
 
 const ContactPage = () => (
-  <Layout>
+  <Layout singleRow>
     <SEO
       title="Contact Us"
       keywords={["william", "street", "catering", "contact"]}

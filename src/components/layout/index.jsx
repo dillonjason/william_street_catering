@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import classNames from "classnames"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { Header } from "../header"
@@ -16,12 +17,18 @@ const query = graphql`
   }
 `
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, singleRow }) => {
   const { site } = useStaticQuery(query)
   return (
     <div className={styles.layoutGrid}>
       <Header siteTitle={site.siteMetadata.title} />
-      <div className={styles.contentGrid}>{children}</div>
+      <div className={classNames(styles.contentGrid)}>
+        {singleRow ? (
+          <div className={styles.singleRow}>{children}</div>
+        ) : (
+          children
+        )}
+      </div>
       <Footer />
     </div>
   )
@@ -29,4 +36,5 @@ export const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  singleRow: PropTypes.bool,
 }
