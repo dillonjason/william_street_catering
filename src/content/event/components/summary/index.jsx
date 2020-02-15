@@ -14,7 +14,7 @@ export const Summary = ({ title, _rawBody, images, mainImage }) => (
         fluids={
           images && images.length
             ? images.map(img => img.asset.fluid)
-            : [mainImage.asset.fluid]
+            : [mainImage?.asset.fluid]
         }
       />
     }
