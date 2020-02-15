@@ -20,12 +20,16 @@
 }
 
 .image {
+  flex: 1;
+
   &.canHide {
+    flex: unset;
     display: none;
   }
 
   @media screen and (min-width: $medium) {
     display: block;
+    flex: unset;
     width: 60%;
 
     &.canHide {
