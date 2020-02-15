@@ -31,7 +31,6 @@ export const Services = () => {
           </>
         ))}
       </InlineContent>
-      <Button to="/services">More Details</Button>
     </div>
   )
 }
