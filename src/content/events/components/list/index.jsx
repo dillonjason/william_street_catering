@@ -45,7 +45,7 @@ export const List = () => {
             <Img
               style={{ maxHeight: 700 }}
               objectFit="cover"
-              fluid={node.mainImage.asset.fluid}
+              fluid={node.mainImage?.asset.fluid}
             />
           }
         >
