@@ -5,6 +5,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 2rem;
+  width: 100%;
 
   margin-bottom: 1rem;
 
@@ -21,6 +22,9 @@
   flex: 1;
 
   @media screen and (min-width: $medium) {
+    flex: unset;
+    width: 33%;
+
     + .item {
       margin-left: 2rem;
     }

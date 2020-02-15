@@ -38,7 +38,7 @@ export const List = () => {
       {allSanityTestimonial.nodes.map((node, index) => (
         <Article
           key={node.slug.current}
-          title={`${node.title} ${node.type}`}
+          title={node.title}
           flip={index % 2}
           className={styles.event}
           img={
