@@ -37,11 +37,13 @@ export const Article = ({
       })}
       {...props}
     >
-      <div
-        className={classNames(styles.image, { [styles.canHide]: canHideImg })}
-      >
-        {img}
-      </div>
+      {img && (
+        <div
+          className={classNames(styles.image, { [styles.canHide]: canHideImg })}
+        >
+          {img}
+        </div>
+      )}
       <div className={styles.content}>
         {title && <h3 className={styles.title}>{title}</h3>}
         {title && (

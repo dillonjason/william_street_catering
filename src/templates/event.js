@@ -31,9 +31,7 @@ export const query = graphql`
         _key
         items {
           type
-          summary {
-            _key
-          }
+          _key
         }
       }
     }
