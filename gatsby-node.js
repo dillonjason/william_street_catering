@@ -19,13 +19,15 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allSanityTestimonial.nodes.forEach(node => {
-    createPage({
-      path: `/events/${node.slug.current}`,
-      component: path.resolve("./src/templates/event.js"),
-      context: {
-        slug: node.slug.current,
-      },
+  result.data.allSanityTestimonial.nodes
+    .filter(node => node.slug)
+    .forEach(node => {
+      createPage({
+        path: `/events/${node.slug.current}`,
+        component: path.resolve("./src/templates/event.js"),
+        context: {
+          slug: node.slug.current,
+        },
+      })
     })
-  })
 }
