@@ -42,11 +42,13 @@ export const List = () => {
           flip={index % 2}
           className={styles.event}
           img={
-            <Img
-              style={{ maxHeight: 700 }}
-              objectFit="cover"
-              fluid={node.mainImage?.asset.fluid}
-            />
+            node.mainImage && (
+              <Img
+                style={{ maxHeight: 700 }}
+                objectFit="cover"
+                fluid={node.mainImage.asset.fluid}
+              />
+            )
           }
         >
           <p className={styles.summary}>{node.summary}</p>

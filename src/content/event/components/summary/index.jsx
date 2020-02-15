@@ -10,13 +10,15 @@ export const Summary = ({ title, _rawBody, images, mainImage }) => (
   <Article
     title={title}
     img={
-      <Images
-        fluids={
-          images && images.length
-            ? images.map(img => img.asset.fluid)
-            : [mainImage?.asset.fluid]
-        }
-      />
+      (images.length || mainImage) && (
+        <Images
+          fluids={
+            images && images.length
+              ? images.map(img => img.asset.fluid)
+              : [mainImage.asset.fluid]
+          }
+        />
+      )
     }
   >
     <BlockContent blocks={_rawBody} />
