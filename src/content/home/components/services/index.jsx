@@ -3,7 +3,6 @@ import { useStaticQuery } from "gatsby"
 import BlockContent from "@sanity/block-content-to-react"
 
 import styles from "./styles.module.scss"
-import { Button } from "../../../../components/button"
 import { InlineContent } from "../../../../components/inline_content"
 
 const query = graphql`
