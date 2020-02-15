@@ -22,7 +22,7 @@ export const Services = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Why William St</h2>
+      <h2 className={styles.title}>Why William St. Catering</h2>
       <InlineContent>
         {allSanityServices.nodes.map(service => (
           <>
