@@ -9,6 +9,15 @@
 
   margin-bottom: 1rem;
 
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 400ms ease-in-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
   @media screen and (min-width: $medium) {
     display: flex;
     flex-direction: row;

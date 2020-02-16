@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useMemo } from "react"
 import "intersection-observer"
 
 export const useIntersectionObserver = ({
@@ -37,4 +37,17 @@ export const useIntersectionObserver = ({
   useEffect(() => cleanup, [])
 
   return entry
+}
+
+export const useHasIntersected = ({ intersectionObserver }) => {
+  const [hasIntersected, setHasIntersected] = useState(false)
+
+  useEffect(() => {
+    if (!intersectionObserver) return
+    if (!hasIntersected) {
+      setHasIntersected(intersectionObserver.isIntersecting)
+    }
+  }, [intersectionObserver, hasIntersected])
+
+  return hasIntersected
 }

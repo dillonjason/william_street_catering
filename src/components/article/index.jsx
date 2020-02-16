@@ -1,7 +1,10 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef } from "react"
 import classNames from "classnames"
 
-import { useIntersectionObserver } from "../../hooks/useIntersectionObserver"
+import {
+  useIntersectionObserver,
+  useHasIntersected,
+} from "../../hooks/useIntersectionObserver"
 
 import styles from "./styles.module.scss"
 
@@ -15,19 +18,13 @@ export const Article = ({
   ...props
 }) => {
   const selfRef = useRef()
-  const [hasIntersected, setHasIntersected] = useState(false)
 
-  const intersection = useIntersectionObserver({
+  const intersectionObserver = useIntersectionObserver({
     target: selfRef,
-    threshold: 0.75,
+    threshold: 0.6,
   })
 
-  useEffect(() => {
-    if (!intersection) return
-    if (!hasIntersected) {
-      setHasIntersected(intersection.isIntersecting)
-    }
-  }, [intersection, hasIntersected])
+  const hasIntersected = useHasIntersected({ intersectionObserver })
 
   return (
     <div
@@ -53,7 +50,13 @@ export const Article = ({
             })}
           />
         )}
-        {children}
+        <div
+          className={classNames(styles.children, {
+            [styles.show]: hasIntersected,
+          })}
+        >
+          {children}
+        </div>
       </div>
     </div>
   )
