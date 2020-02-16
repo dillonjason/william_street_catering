@@ -45,7 +45,10 @@ export const useHasIntersected = ({ intersectionObserver }) => {
   useEffect(() => {
     if (!intersectionObserver) return
     if (!hasIntersected) {
-      setHasIntersected(intersectionObserver.isIntersecting)
+      setHasIntersected(
+        intersectionObserver.isIntersecting ||
+          intersectionObserver.intersectionRect.top > 0
+      )
     }
   }, [intersectionObserver, hasIntersected])
 
