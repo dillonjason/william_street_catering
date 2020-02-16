@@ -14,7 +14,7 @@ export const InlineContent = ({ children, className, ...props }) => {
 
   const intersectionObserver = useIntersectionObserver({
     target: selfRef,
-    threshold: 0.55,
+    threshold: 0.25,
   })
 
   const hasIntersected = useHasIntersected({ intersectionObserver })
