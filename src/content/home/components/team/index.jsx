@@ -11,9 +11,11 @@ const query = graphql`
   query {
     sanitySummary {
       _rawUs
-      images {
+    }
+    sanityAssets(slug: { current: { eq: "about-us" } }) {
+      image {
         asset {
-          fluid(maxWidth: 1080) {
+          fluid {
             ...GatsbySanityImageFluid
           }
         }
@@ -23,7 +25,7 @@ const query = graphql`
 `
 
 export const Team = () => {
-  const { sanitySummary } = useStaticQuery(query)
+  const { sanitySummary, sanityAssets } = useStaticQuery(query)
   return (
     <Article
       title="Who we are"
@@ -31,7 +33,7 @@ export const Team = () => {
         <Img
           style={{ maxHeight: 700 }}
           objectFit="cover"
-          fluid={sanitySummary.images[1].asset.fluid}
+          fluid={sanityAssets.image.asset.fluid}
         />
       }
       flip

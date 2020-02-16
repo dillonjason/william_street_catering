@@ -6,22 +6,24 @@ import styles from "./styles.module.scss"
 
 const query = graphql`
   query {
-    sanityImageAsset(
-      assetId: { eq: "4ac6e563f6e5e3e4a3cec461f5734e26ddcd5ed5" }
-    ) {
-      fluid {
-        ...GatsbySanityImageFluid
+    sanityAssets(slug: { current: { eq: "hero" } }) {
+      image {
+        asset {
+          fluid {
+            ...GatsbySanityImageFluid
+          }
+        }
       }
     }
   }
 `
 
 export const Hero = () => {
-  const { sanityImageAsset } = useStaticQuery(query)
+  const { sanityAssets } = useStaticQuery(query)
 
   return (
     <div className={styles.hero}>
-      <Img style={{ height: "60vh" }} fluid={sanityImageAsset.fluid} />
+      <Img style={{ height: "60vh" }} fluid={sanityAssets.image.asset.fluid} />
     </div>
   )
 }

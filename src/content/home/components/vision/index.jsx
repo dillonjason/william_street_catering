@@ -12,9 +12,11 @@ const query = graphql`
     sanitySummary {
       title
       _rawBody
-      images {
+    }
+    sanityAssets(slug: { current: { eq: "about-william-st-catering" } }) {
+      image {
         asset {
-          fluid(maxWidth: 1080) {
+          fluid {
             ...GatsbySanityImageFluid
           }
         }
@@ -24,7 +26,7 @@ const query = graphql`
 `
 
 export const Vision = () => {
-  const { sanitySummary } = useStaticQuery(query)
+  const { sanitySummary, sanityAssets } = useStaticQuery(query)
   return (
     <Article
       title={sanitySummary.title}
@@ -32,7 +34,7 @@ export const Vision = () => {
         <Img
           style={{ maxHeight: 700 }}
           objectFit="cover"
-          fluid={sanitySummary.images[0].asset.fluid}
+          fluid={sanityAssets.image.asset.fluid}
         />
       }
       canHideImg
