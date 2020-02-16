@@ -1,18 +1,24 @@
 @import "../../../../sass/colors.scss";
 
-.container {
-  grid-column: 2 / 3;
-}
-
-.title {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.link {
-  color: $body;
-
-  @media (prefers-color-scheme: dark) {
-    color: $dark-body;
+.contacts {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  a,
+  a:active {
+    color: white;
+    display: block;
   }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a + a {
+    margin-top: 0.5rem;
+  }
+}
+
+.icon {
+  margin-right: 0.25rem;
 }

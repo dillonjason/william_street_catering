@@ -5,7 +5,7 @@ import { SEO } from "../components/seo"
 import { Contact } from "../content/contact"
 
 const ContactPage = () => (
-  <Layout singleRow>
+  <Layout>
     <SEO
       title="Contact Us"
       keywords={["william", "street", "catering", "contact"]}

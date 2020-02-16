@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa"
 
 import styles from "./styles.module.scss"
 
@@ -14,6 +15,8 @@ export const Footer = () => (
           city
           state
           zip
+          facebook
+          instagram
         }
       }
     `}
@@ -28,14 +31,28 @@ export const Footer = () => (
               {sanityContact.email}
             </a>
           </li>
-          <li>
-            {sanityContact.address}
-            <br />
-            {sanityContact.city}, {sanityContact.state} {sanityContact.zip}
-          </li>
+          {sanityContact.address && (
+            <li>
+              {sanityContact.address}
+              <br />
+              {sanityContact.city}, {sanityContact.state} {sanityContact.zip}
+            </li>
+          )}
           <li>
             <a className={styles.phoneText} href={`tel:${sanityContact.phone}`}>
               {sanityContact.phone}
+            </a>
+          </li>
+          <li>
+            <a href={sanityContact.instagram}>
+              <FaInstagram className={styles.icon} />
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href={sanityContact.facebook}>
+              <FaFacebookSquare className={styles.icon} />
+              Facebook
             </a>
           </li>
         </ul>

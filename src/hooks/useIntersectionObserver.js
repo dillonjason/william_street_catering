@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useMemo } from "react"
+import { useRef, useEffect, useState } from "react"
 import "intersection-observer"
 
 export const useIntersectionObserver = ({
