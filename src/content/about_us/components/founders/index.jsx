@@ -17,7 +17,7 @@ const query = graphql`
         _rawBio
         image {
           asset {
-            fluid(maxWidth: 1080) {
+            fluid(maxWidth: 1920) {
               ...GatsbySanityImageFluid
             }
           }

@@ -14,14 +14,14 @@ export const query = graphql`
       _rawMenu
       mainImage {
         asset {
-          fluid(maxWidth: 1080) {
+          fluid(maxWidth: 1920) {
             ...GatsbySanityImageFluid
           }
         }
       }
       images {
         asset {
-          fluid(maxWidth: 1080) {
+          fluid(maxWidth: 1920) {
             ...GatsbySanityImageFluid
           }
         }

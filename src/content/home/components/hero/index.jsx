@@ -9,7 +9,7 @@ const query = graphql`
     sanityAssets(slug: { current: { eq: "hero" } }) {
       image {
         asset {
-          fluid {
+          fluid(maxWidth: 3840) {
             ...GatsbySanityImageFluid
           }
         }
@@ -23,7 +23,11 @@ export const Hero = () => {
 
   return (
     <div className={styles.hero}>
-      <Img style={{ height: "60vh" }} fluid={sanityAssets.image.asset.fluid} />
+      <Img
+        style={{ height: "60vh" }}
+        objectFit="cover"
+        fluid={sanityAssets.image.asset.fluid}
+      />
     </div>
   )
 }

@@ -15,7 +15,7 @@ const query = graphql`
     sanityAssets(slug: { current: { eq: "about-us" } }) {
       image {
         asset {
-          fluid {
+          fluid(maxWidth: 1920) {
             ...GatsbySanityImageFluid
           }
         }
