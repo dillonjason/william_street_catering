@@ -1,0 +1,41 @@
+@import "../../sass/screen_widths.scss";
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+  width: 100%;
+
+  margin-bottom: 1rem;
+
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 400ms ease-in-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  @media screen and (min-width: $medium) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.item {
+  text-align: center;
+  overflow: hidden;
+  flex: 1;
+
+  @media screen and (min-width: $medium) {
+    flex: unset;
+    width: 33%;
+
+    + .item {
+      margin-left: 2rem;
+    }
+  }
+}

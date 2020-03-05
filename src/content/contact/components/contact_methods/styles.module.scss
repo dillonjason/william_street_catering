@@ -1,0 +1,24 @@
+@import "../../../../sass/colors.scss";
+
+.contacts {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  a,
+  a:active {
+    color: white;
+    display: block;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a + a {
+    margin-top: 0.5rem;
+  }
+}
+
+.icon {
+  margin-right: 0.25rem;
+}

@@ -1,11 +1,17 @@
+@import "../../sass/colors.scss";
+
 .subHeader {
   display: block;
   padding: 2rem 4rem;
   margin-bottom: 1rem;
-  background: black;
-  color: white;
   display: flex;
   justify-content: center;
   border-radius: 4px;
   text-align: center;
+
+  color: $body;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-body;
+  }
 }

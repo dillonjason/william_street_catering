@@ -2,59 +2,63 @@
 @import "../../sass/colors.scss";
 
 .container {
-  $logo-width: 80vw;
-  $logo-width-large: 20vw;
-  $logo-padding: 0.75rem;
+  $logo-width: 4rem;
+  $logo-width-large: 8rem;
+  $logo-padding: 0.25rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 0 1rem;
 
   grid-column: 1 / 4;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: white;
-  box-shadow: 0px 3px 3px 0px #fff;
+  background: $background;
+  box-shadow: 0px 3px 3px 0px $background;
   z-index: 10;
 
-  .hero {
-    position: relative;
+  @media (prefers-color-scheme: dark) {
+    background: $dark-background;
+    box-shadow: 0px 3px 3px 0px $dark-background;
+  }
+
+  @supports (backdrop-filter: blur(10px)) or
+    (-webkit-backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: scale-color($background, $alpha: -10%);
+    box-shadow: none;
+
+    @media (prefers-color-scheme: dark) {
+      background: scale-color($dark-background, $alpha: -10%);
+    }
+  }
+
+  @media screen and (min-width: $large) {
+    padding: 0 3rem;
+  }
+
+  .logo {
+    margin: 1rem 0;
+    width: $logo-width;
+    padding: $logo-padding;
+    border-radius: 4px;
+
+    @media (prefers-color-scheme: dark) {
+      filter: invert(1);
+    }
+
+    @media screen and (min-width: $large) {
+      width: $logo-width-large;
+    }
+  }
+
+  .navigation {
+    flex: 1;
     display: flex;
-    justify-content: center;
-
-    .background {
-      background: url("../../images/hero.jpg");
-      filter: blur(4px);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-
-      height: 100%;
-      width: 100%;
-      content: " ";
-    }
-
-    .logo {
-      margin: 1rem 0;
-      width: $logo-width;
-      background-color: rgba(255, 255, 255, 0.37);
-      filter: contrast(1);
-      padding: $logo-padding;
-      border-radius: 4px;
-      transition: width ease-in-out 300ms;
-
-      @media screen and (min-width: $small) {
-        width: $logo-width-large;
-      }
-
-      &.smallLogo {
-        width: 25vw;
-
-        @media screen and (min-width: $small) {
-          width: 10vw;
-        }
-      }
-    }
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .contact {
@@ -76,6 +80,10 @@
       text-decoration: none;
       color: $body;
       margin: 0 0.5rem;
+
+      @media (prefers-color-scheme: dark) {
+        color: $dark-body;
+      }
     }
 
     .phoneText {

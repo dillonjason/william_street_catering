@@ -1,53 +1,92 @@
 @import "../../sass/screen_widths.scss";
+@import "../../sass/colors.scss";
 
 .container {
-  clear: both;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
+  grid-column: 1 / 4;
 
-  .title {
-    text-align: center;
-    padding-bottom: 1rem;
-    width: 100%;
-    border-bottom: 1px solid black;
-
-    @media screen and (min-width: $large) {
-      text-align: left;
-    }
+  @media screen and (min-width: $medium) {
+    grid-column: 1 / 3;
+    flex-direction: row;
   }
 
-  .content {
-    .image {
-      width: 80%;
-      min-width: 250px;
-
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 2rem;
-
-      @media screen and (min-width: $medium) {
-        width: 35%;
-
-        &.left {
-          margin-right: 2rem;
-          float: left;
-        }
-
-        &.right {
-          margin-left: 2rem;
-          float: right;
-        }
-
-        &.largeImage {
-          width: 45%;
-        }
-      }
-
-      img {
-        border-radius: 4px;
-      }
+  &.flip {
+    @media screen and (min-width: $medium) {
+      grid-column: 2 / 4;
+      flex-direction: row-reverse;
     }
+  }
+}
+
+.image {
+  flex: 1;
+
+  &.canHide {
+    flex: unset;
+    display: none;
+  }
+
+  @media screen and (min-width: $medium) {
+    display: block;
+    flex: unset;
+    width: 60%;
+
+    &.canHide {
+      display: block;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  margin-bottom: 5%;
+  padding: 0 1rem;
+
+  @media screen and (min-width: $medium) {
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.flip .content {
+  @media screen and (min-width: $medium) {
+    margin-left: 0;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.underline {
+  height: 2px;
+  width: 0;
+  transition: width 500ms ease-in-out;
+  background: $body;
+  @media (prefers-color-scheme: dark) {
+    background: $dark-body;
+  }
+
+  &.show {
+    width: 10rem;
+  }
+}
+
+.children {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 400ms ease-in-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

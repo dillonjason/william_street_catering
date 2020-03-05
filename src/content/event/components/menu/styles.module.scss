@@ -1,0 +1,28 @@
+@import "../../../../sass/screen_widths.scss";
+
+.menus {
+  grid-column: 1 / 3;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $medium) {
+    grid-column: 1 / 3;
+    flex-direction: row;
+  }
+}
+
+.menu {
+  flex-basis: 100%;
+
+  @media screen and (min-width: $medium) {
+    flex-basis: 33%;
+  }
+}
+
+.itemList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

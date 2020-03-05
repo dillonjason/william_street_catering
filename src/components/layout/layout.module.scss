@@ -1,0 +1,44 @@
+@import "../../sass/typography.scss";
+@import "../../sass/colors.scss";
+@import "../../sass/screen_widths.scss";
+
+html {
+  font-family: $font-family;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: $body;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-body;
+    background-color: $dark-background;
+  }
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1rem 2fr 1rem;
+  grid-template-rows: auto;
+
+  @media screen and (min-width: $large) {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+}
+
+.singleRow {
+  grid-column: 2 / 3;
+}
