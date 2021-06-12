@@ -5,7 +5,7 @@ import { PageTitle } from "../../components/page_title"
 
 export const Reviews = () => (
   <>
-    <PageTitle>Recent Reviews</PageTitle>
+    <PageTitle>Reviews</PageTitle>
     <List />
   </>
 )
