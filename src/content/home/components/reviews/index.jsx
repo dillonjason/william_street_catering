@@ -21,7 +21,7 @@ export const Reviews = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Recent Reviews</h2>
+      <h2 className={styles.title}>Reviews</h2>
       <InlineContent>
         {allSanityTestimonial.nodes.map(review => (
           <>
