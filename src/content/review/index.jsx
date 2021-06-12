@@ -3,7 +3,7 @@ import React from "react"
 import { Summary } from "./components/summary"
 import { Menu } from "./components/menu"
 
-export const Event = ({ data }) => (
+export const Review = ({ data }) => (
   <>
     <Summary {...data} />
     <Menu {...data} />

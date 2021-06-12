@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import { Layout } from "../components/layout"
 import { SEO } from "../components/seo"
-import { Event } from "../content/event"
+import { Review } from "../content/review"
 
 export const query = graphql`
   query($slug: String!) {
@@ -38,16 +38,16 @@ export const query = graphql`
   }
 `
 
-const EventTemplate = ({ data }) => {
+const ReviewTemplate = ({ data }) => {
   const { sanityTestimonial } = data
   const { title, type } = sanityTestimonial
 
   return (
     <Layout>
       <SEO title={title} keywords={["william", "street", "catering", type]} />
-      <Event data={sanityTestimonial} />
+      <Review data={sanityTestimonial} />
     </Layout>
   )
 }
 
-export default EventTemplate
+export default ReviewTemplate
