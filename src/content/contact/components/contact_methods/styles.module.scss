@@ -4,10 +4,15 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+
   a,
   a:active {
-    color: white;
+    color: $body;
     display: block;
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-body;
+    }
   }
 
   li {
