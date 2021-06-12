@@ -40,7 +40,7 @@ export const List = () => {
           key={node.slug.current}
           title={node.title}
           flip={index % 2}
-          className={styles.event}
+          className={styles.review}
           img={
             node.mainImage && (
               <Img
@@ -52,7 +52,7 @@ export const List = () => {
           }
         >
           <p className={styles.summary}>{node.summary}</p>
-          <Button to={`/events/${node.slug.current}`}>Details</Button>
+          <Button to={`/reviews/${node.slug.current}`}>Details</Button>
         </Article>
       ))}
     </>

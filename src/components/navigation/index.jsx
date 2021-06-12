@@ -9,8 +9,8 @@ export const Navigation = () => {
       <Link className={styles.largeOnly} to="/about-us">
         About Us
       </Link>
-      <Link className={styles.largeOnly} to="/events">
-        Events
+      <Link className={styles.largeOnly} to="/reviews">
+        Reviews
       </Link>
       <Link to="/contact">Contact Us</Link>
     </nav>

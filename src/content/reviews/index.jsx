@@ -3,9 +3,9 @@ import React from "react"
 import { List } from "./components/list"
 import { PageTitle } from "../../components/page_title"
 
-export const Events = () => (
+export const Reviews = () => (
   <>
-    <PageTitle>Recent Events</PageTitle>
+    <PageTitle>Recent Reviews</PageTitle>
     <List />
   </>
 )

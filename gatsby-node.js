@@ -23,8 +23,8 @@ exports.createPages = async ({ graphql, actions }) => {
     .filter(node => node.slug)
     .forEach(node => {
       createPage({
-        path: `/events/${node.slug.current}`,
-        component: path.resolve("./src/templates/event.js"),
+        path: `/review/${node.slug.current}`,
+        component: path.resolve("./src/templates/review.js"),
         context: {
           slug: node.slug.current,
         },
