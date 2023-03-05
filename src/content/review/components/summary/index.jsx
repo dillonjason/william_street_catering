@@ -12,10 +12,10 @@ export const Summary = ({ title, _rawBody, images, mainImage }) => (
     img={
       (images.length || mainImage) && (
         <Images
-          fluids={
+          images={
             images && images.length
-              ? images.map(img => img.asset.fluid)
-              : [mainImage.asset.fluid]
+              ? images.map(img => img.asset.gatsbyImageData)
+              : [mainImage.asset.gatsbyImageData]
           }
         />
       )

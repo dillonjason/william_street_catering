@@ -1,8 +1,8 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import BlockContent from "@sanity/block-content-to-react"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 import { InlineContent } from "../../../../components/inline_content"
 
 const query = graphql`

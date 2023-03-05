@@ -4,7 +4,7 @@ import BlockContent from "@sanity/block-content-to-react"
 
 import { Article } from "../../../../components/article"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 export const Menu = ({ _rawMenu, menu }) => {
   if (!menu) return null

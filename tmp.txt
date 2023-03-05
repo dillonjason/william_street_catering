@@ -1,0 +1,2 @@
+It appears you're passing a variable to your image component. We haven't changed it, but we have updated it to use the new GatsbyImage component. Please check src/components/images/index.jsx manually.
+maxWidth is no longer supported for fluid (now fullWidth) images. We've updated the query in src/components/logo/index.jsx to use a constrained image instead.

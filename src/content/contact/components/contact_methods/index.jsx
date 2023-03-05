@@ -1,12 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa"
 
 import { Article } from "../../../../components/article"
-import { SubHeader } from "../../../../components/sub_header"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 const query = graphql`
   query {
@@ -23,9 +22,7 @@ const query = graphql`
     sanityAssets(slug: { current: { eq: "contact-us" } }) {
       image {
         asset {
-          fluid(maxWidth: 1920) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
     }
@@ -38,12 +35,11 @@ export const ContactMethods = () => {
     <Article
       title="Contact Us"
       img={
-        sanityAssets?.image?.asset?.fluid && (
-          <Img
+        sanityAssets?.image?.asset?.gatsbyImageData && (
+          <GatsbyImage
+            image={sanityAssets.image.asset.gatsbyImageData}
             style={{ maxHeight: 700 }}
-            objectFit="cover"
-            fluid={sanityAssets.image.asset.fluid}
-          />
+            objectFit="cover" />
         )
       }
       flip
@@ -85,5 +81,5 @@ export const ContactMethods = () => {
         </li>
       </ul>
     </Article>
-  )
+  );
 }
