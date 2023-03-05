@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "Dillon Jason <djasuar@gmail.com>",
   "dependencies": {
-    "@sanity/block-content-to-react": "^2.0.7",
-    "classnames": "^2.2.6",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "classnames": "^2.3.2",
     "gatsby": "^2.18.21",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-google-analytics": "^2.1.32",
@@ -19,18 +19,16 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-source-sanity": "^5.0.5",
     "gatsby-transformer-sharp": "^2.3.12",
-    "intersection-observer": "^0.7.0",
-    "node-sass": "^4.13.0",
-    "nuka-carousel": "^4.6.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.8.0",
-    "react-responsive-carousel": "^3.1.51"
+    "intersection-observer": "^0.12.2",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.8.0",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.8.4"
   },
   "keywords": [
     "gatsby"
