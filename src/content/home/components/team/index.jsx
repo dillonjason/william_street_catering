@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import "react-responsive-carousel/lib/styles/carousel.css"
 import BlockContent from "@sanity/block-content-to-react"
 
@@ -15,9 +15,7 @@ const query = graphql`
     sanityAssets(slug: { current: { eq: "about-us" } }) {
       image {
         asset {
-          fluid(maxWidth: 1920) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
     }
@@ -30,16 +28,15 @@ export const Team = () => {
     <Article
       title="Who we are"
       img={
-        <Img
+        <GatsbyImage
+          image={sanityAssets.image.asset.gatsbyImageData}
           style={{ maxHeight: 700 }}
-          objectFit="cover"
-          fluid={sanityAssets.image.asset.fluid}
-        />
+          objectFit="cover" />
       }
       flip
     >
       <BlockContent blocks={sanitySummary._rawUs} />
       <Button to="/about-us">More About Us</Button>
     </Article>
-  )
+  );
 }

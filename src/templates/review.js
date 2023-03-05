@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import { Layout } from "../components/layout"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 import { Review } from "../content/review"
 
 export const query = graphql`
@@ -14,16 +14,12 @@ export const query = graphql`
       _rawMenu
       mainImage {
         asset {
-          fluid(maxWidth: 1920) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
       images {
         asset {
-          fluid(maxWidth: 1920) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
       menu {
@@ -44,7 +40,7 @@ const ReviewTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} keywords={["william", "street", "catering", type]} />
+      <Seo title={title} keywords={["william", "street", "catering", type]} />
       <Review data={sanityTestimonial} />
     </Layout>
   )

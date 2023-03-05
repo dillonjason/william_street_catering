@@ -1,17 +1,15 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 const query = graphql`
   query {
     sanityAssets(slug: { current: { eq: "hero" } }) {
       image {
         asset {
-          fluid(maxWidth: 3840) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
     }
@@ -23,11 +21,10 @@ export const Hero = () => {
 
   return (
     <div className={styles.hero}>
-      <Img
+      <GatsbyImage
+        image={sanityAssets.image.asset.gatsbyImageData}
         style={{ height: "60vh" }}
-        objectFit="cover"
-        fluid={sanityAssets.image.asset.fluid}
-      />
+        objectFit="cover" />
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import { Header } from "../header"
 import { Footer } from "../footer"
-import styles from "./layout.module.scss"
+import * as styles from "./layout.module.scss"
 
 const query = graphql`
   query SiteTitleQuery {

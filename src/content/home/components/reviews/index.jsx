@@ -1,7 +1,7 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 import { Button } from "../../../../components/button"
 import { InlineContent } from "../../../../components/inline_content"
 

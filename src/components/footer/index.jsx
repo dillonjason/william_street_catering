@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 export const Footer = () => (
   <StaticQuery

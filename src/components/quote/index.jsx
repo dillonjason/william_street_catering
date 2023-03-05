@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 export const Quote = ({ author, children }) => (
   <div className={styles.container}>

@@ -7,7 +7,7 @@ import {
   useHasIntersected,
 } from "../../hooks/useIntersectionObserver"
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 export const InlineContent = ({ children, className, ...props }) => {
   const selfRef = useRef()

@@ -1,12 +1,12 @@
 import React from "react"
 
 import { Layout } from "../components/layout"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 import { Reviews } from "../content/reviews"
 
 const ReviewsPage = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Reviews"
       keywords={["william", "street", "catering", "reviews"]}
     />

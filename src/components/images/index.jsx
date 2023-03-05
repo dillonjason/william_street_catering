@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 
 const INTERVAL_LENGTH = 5000
 
-export const Images = ({ fluids }) => {
+export const Images = ({ images }) => {
   const [visibleIndex, setVisibleIndex] = useState(0)
 
   useEffect(() => {
-    const maxIndex = fluids.length - 1
+    const maxIndex = images.length - 1
 
     const interval = setInterval(() => {
       setVisibleIndex(currentIndex => {
@@ -27,8 +27,9 @@ export const Images = ({ fluids }) => {
 
   return (
     <div className={styles.container}>
-      {fluids.map((fluid, index) => (
-        <Img
+      {images.map((image, index) => (
+        <GatsbyImage
+          image={image}
           key={index}
           style={{
             position: "absolute",
@@ -39,14 +40,12 @@ export const Images = ({ fluids }) => {
             opacity: index === visibleIndex ? 1 : 0,
             transition: "opacity 200ms ease-in-out",
           }}
-          objectFit="cover"
-          fluid={fluid}
-        />
+          objectFit="cover" />
       ))}
     </div>
-  )
+  );
 }
 
 Images.propTypes = {
-  fluids: PropTypes.arrayOf(PropTypes.object),
+  images: PropTypes.arrayOf(PropTypes.object),
 }
